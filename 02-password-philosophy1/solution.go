@@ -40,7 +40,7 @@ func fromLine(line string) PasswordPolicy {
 }
 
 func readInput() *[]PasswordPolicy {
-	lines := common.ReadInputLines("02-password-philosophy/input.txt")
+	lines := common.ReadInputLines("02-password-philosophy1/input.txt")
 	var passwordPolicies []PasswordPolicy
 	for _, line := range lines {
 		passwordPolicies = append(passwordPolicies, fromLine(line))

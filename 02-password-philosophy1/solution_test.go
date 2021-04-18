@@ -15,19 +15,19 @@ func Test_fromLine(t *testing.T) {
 		want PasswordPolicy
 	}{
 		{
-			"first case",
+			"first sample",
 			args{"1-3 a: abcde"},
 			PasswordPolicy{upper: 3, lower: 1, letter: "a", password: "abcde"},
 		},
 		{
-			"second case",
+			"second sample",
 			args{"1-3 b: cdefg"},
-			PasswordPolicy{upper: 1, lower: 3, letter: "b", password: "cdefg"},
+			PasswordPolicy{upper: 3, lower: 1, letter: "b", password: "cdefg"},
 		},
 		{
-			"first case",
+			"third sample",
 			args{"2-9 c: ccccccccc"},
-			PasswordPolicy{upper: 2, lower: 9, letter: "c", password: "ccccccccc"},
+			PasswordPolicy{upper: 9, lower: 2, letter: "c", password: "ccccccccc"},
 		},
 	}
 	for _, tt := range tests {
